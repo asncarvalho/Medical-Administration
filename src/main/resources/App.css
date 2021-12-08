@@ -1,3 +1,15 @@
 .anchor-pane_1{
     -fx-background-color: #00c1c2;
 }
+
+.btn{
+    -fx-background-color: #00c1c2;
+}
+
+.button:hover {
+    -fx-background-color : #56b2dd;
+}
+
+.button:pressed{
+    -fx-background-color : #197ead;
+}

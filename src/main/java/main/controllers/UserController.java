@@ -132,7 +132,6 @@ public class UserController implements Initializable{
             
     private void showAsDialog(String fxml) {
         try {
-            System.out.println(fxml+".fxml");
             Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/"+fxml+".fxml")));
             Stage stage = new Stage();
             Scene scene = new Scene(parent);

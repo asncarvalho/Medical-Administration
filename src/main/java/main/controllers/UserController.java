@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -18,7 +12,6 @@ import javafx.stage.Stage;
 import main.models.Doctor;
 import main.models.User;
 import main.util.Helpers;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
@@ -63,6 +56,12 @@ public class UserController implements Initializable{
             Optional<?> userAuth = AuthController.getInstance().logIn(txtLoginField.getText(), txtPasswordField.getText());
 
             userAuth.ifPresent(System.out::println);
+            userAuth.ifPresentOrElse((value)
+                    -> {
+                        showAsDialog("main");
+                        Helpers.closeCurrentStage(event);
+            }, ()
+                    -> Helpers.throwNewAlert("Usuário não encontrado!"));
         }
     }
     
@@ -77,47 +76,33 @@ public class UserController implements Initializable{
     void btnRegister(ActionEvent event) throws IOException{
         if (event.getSource() == btnSignIn) {
             if (txtNameField.getText().equals("")) {
-                Stage alert = Helpers.alertMaker("Insira um nome válido");
-                alert.setAlwaysOnTop(true);
-                alert.show();
+                Helpers.throwNewAlert("Insira um nome válido");
             }else if (txtCpfField.getText().equals("")) {
-                Stage alert = Helpers.alertMaker("Insira um CPF válido");
-                alert.setAlwaysOnTop(true);
-                alert.show();
+                Helpers.throwNewAlert("Insira um CPF válido");
             }else if (txtPasswordRegister.getText().equals("")) {
-                Stage alert = Helpers.alertMaker("Insira uma senha válida");
-                alert.setAlwaysOnTop(true);
-                alert.show();
+                Helpers.throwNewAlert("Insira uma senha válida");
             }else if (txtConfPassRegister.getText().equals("")) {
-                Stage alert = Helpers.alertMaker("Confirme sua senha");
-                alert.setAlwaysOnTop(true);
-                alert.show();
+                Helpers.throwNewAlert("Confirme sua senha");
             }else if (!txtPasswordRegister.getText().equals(txtConfPassRegister.getText())) {
-                Stage alert = Helpers.alertMaker("Senhas não conferem!");
-                alert.setAlwaysOnTop(true);
-                alert.show();
+                Helpers.throwNewAlert("Senhas não conferem!");
             }else{
                 String name = txtNameField.getText();
                 String cpf = txtCpfField.getText();
                 String password = txtPasswordRegister.getText();
-                Stage current = (Stage)((Node) event.getSource()).getScene().getWindow();
-                Stage alert = Helpers.successAlert("Usuário cadastrado com Sucesso!");
-                alert.setAlwaysOnTop(true);
                 switch (selectUserType.getText()) {
                     case "Medico" -> {
                         Doctor newDoctor = new Doctor(name, cpf, password);
                         Controller.getInstance().getDoctorsList().add(newDoctor);
-                        System.out.println(Controller.getInstance().getDoctorsList().size());
-                        Controller.getInstance().saveFile("./src/saves/data.dat");
-                        alert.show();
-                        current.close();
+                        Controller.getInstance().saveFile("data.dat");
+                        Helpers.throwSuccessAlert("Usuário cadastrado com Sucesso!");
+                        Helpers.closeCurrentStage(event);
                     }
                     case "Recepcionista" -> {
                         User newUser = new User(name, cpf, password);
                         Controller.getInstance().getUserList().add(newUser);
-                        Controller.getInstance().saveFile("./src/saves/data.dat");
-                        alert.show();
-                        current.close();
+                        Controller.getInstance().saveFile("data.dat");
+                        Helpers.throwSuccessAlert("Usuário cadastrado com Sucesso!");
+                        Helpers.closeCurrentStage(event);
                     }
                     default -> {
                         Stage err = Helpers.alertMaker("Selecione ao menos um tipo de usuário");

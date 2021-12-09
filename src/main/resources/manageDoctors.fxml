@@ -10,10 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.ListDoctorsController">
    <children>
-      <GridPane layoutY="257.0" prefHeight="504.0" prefWidth="1101.0">
+      <GridPane layoutY="257.0" prefHeight="466.0" prefWidth="1025.0">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -22,12 +21,12 @@
           <RowConstraints maxHeight="466.0" minHeight="0.0" prefHeight="435.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <TableView fx:id="tblMain" prefHeight="335.0" prefWidth="873.0" GridPane.rowIndex="1">
               <columns>
-                <TableColumn prefWidth="556.0" text="Nome" />
-                <TableColumn minWidth="0.0" prefWidth="193.0" text="CPF" />
-                  <TableColumn minWidth="0.0" prefWidth="208.0" text="Especialidades" />
-                  <TableColumn minWidth="0.0" prefWidth="143.0" text="Ações" />
+                <TableColumn id="fieldName" fx:id="colName" prefWidth="365.0382444858551" text="Nome" />
+                <TableColumn id="fieldCpf" fx:id="colCPF" minWidth="0.0" prefWidth="138.63470458984375" text="CPF" />
+                  <TableColumn id="fieldResidencies" fx:id="colResidencies" minWidth="0.0" prefWidth="210.44546508789062" text="Especialidades" />
+                  <TableColumn fx:id="colActions" minWidth="0.0" prefWidth="305.196044921875" text="Ações" />
               </columns>
             </TableView>
             <Text fill="#00c1c2" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Médicos" textAlignment="CENTER" wrappingWidth="320.13671875">
@@ -37,6 +36,6 @@
             </Text>
          </children>
       </GridPane>
-      <Pane layoutY="-2.0" prefHeight="239.0" prefWidth="1101.0" style="-fx-background-color: #00c1c2;" />
+      <Pane layoutY="-2.0" prefHeight="239.0" prefWidth="1025.0" style="-fx-background-color: #00c1c2;" />
    </children>
 </AnchorPane>

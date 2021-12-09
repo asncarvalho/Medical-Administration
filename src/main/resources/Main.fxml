@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="1349.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="1278.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox layoutX="7.0" layoutY="4.0" prefHeight="890.0" prefWidth="390.0" style="-fx-background-color: #00c1c2;">
+      <VBox layoutX="7.0" layoutY="4.0" prefHeight="827.0" prefWidth="390.0" style="-fx-background-color: #00c1c2;">
          <children>
             <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="389.0" styleClass="btn" stylesheets="@App.css" text="Gerenciar Pacientes">
                <padding>

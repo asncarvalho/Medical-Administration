@@ -19,7 +19,7 @@ public class App extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/app.fxml")));
         Scene scene = new Scene(root);
         UserController.publicStage = stage;
-//        Controller.getInstance().loadFile("./src/saves/data.dat");
+        Controller.getInstance().loadFile("data.dat");
 
         root.setOnMousePressed(evt ->{
             x = evt.getSceneX();

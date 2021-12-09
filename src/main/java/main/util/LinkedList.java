@@ -6,6 +6,7 @@
 package main.util;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -190,5 +191,5 @@ public class LinkedList<T> implements IList<T>, Serializable {
             anterior.setNextNode(atual.getNextNode());
             return atual.getElement();
     }
-    
+
 }

@@ -31,7 +31,7 @@
             <Label layoutX="71.0" layoutY="236.0" text="Tipo de Usuário" />
             <MenuButton fx:id="selectUserType" layoutX="191.0" layoutY="231.0" mnemonicParsing="false" onAction="#selectUserLevel" prefHeight="25.0" prefWidth="189.0" text="Selecione">
               <items>
-                <MenuItem fx:id="selectDoctor" mnemonicParsing="false" onAction="#selectUserLevel" text="Médico" />
+                <MenuItem fx:id="selectDoctor" mnemonicParsing="false" onAction="#selectUserLevel" text="Medico" />
                 <MenuItem fx:id="selectRecept" mnemonicParsing="false" onAction="#selectUserLevel" text="Recepcionista" />
               </items>
             </MenuButton>

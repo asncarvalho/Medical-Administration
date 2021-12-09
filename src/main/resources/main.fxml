@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="966.0" prefWidth="1527.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.MainMenuController">
+   <children>
+      <BorderPane fx:id="mainPane" layoutX="8.0" layoutY="7.0" prefHeight="958.0" prefWidth="1519.0">
+         <left>
+            <VBox prefHeight="897.0" prefWidth="345.0" style="-fx-background-color: #00c1c2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="managePatients" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="389.0" styleClass="btn" stylesheets="@App.css" text="Gerenciar Pacientes">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="manageDoctors" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnMngDoctors" prefHeight="70.0" prefWidth="389.0" styleClass="btn" stylesheets="@App.css" text="Gerenciar Médicos">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="manageSchedule" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="389.0" styleClass="btn" stylesheets="@App.css" text="Controle de Disponibilidade/Agenda Médica">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="manageRecords" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="389.0" styleClass="btn" stylesheets="@App.css" text="Prontuário eletrônico">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="selfservicePatients" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="389.0" styleClass="btn" stylesheets="@App.css" text="Tela de Autoatendimento para Pacientes">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="manageResidencies" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="70.0" prefWidth="389.0" styleClass="btn" stylesheets="@App.css" text="Gerenciar Especialidades">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="historyPatients" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="97.0" prefWidth="385.0" styleClass="btn" stylesheets="@App.css" text="Histórico de Pacientes">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

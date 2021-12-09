@@ -7,13 +7,11 @@ import java.io.Serializable;
  * @author Ariel Carvalho
  */
 public class MedicalResidency implements Serializable{
-    
+
     private String description;
-    private Doctor doctor;
 
     public MedicalResidency(String description) {
         this.description = description;
-        this.doctor = null;
     }
 
     public String getDescription() { return description; }
@@ -22,8 +20,10 @@ public class MedicalResidency implements Serializable{
         this.description = description;
     }
 
-    //Se o médico tiver 2 residências, não adicionar. Talvez utilize try/catch
-    public void setDoctor(Doctor doctor) { this.doctor = doctor; }
-
-    public void disassociateDoctor(){ this.doctor = null; }
+    @Override
+    public String toString() {
+        return "MedicalResidency{" +
+                "description='" + description + '\'' +
+                '}';
+    }
 }

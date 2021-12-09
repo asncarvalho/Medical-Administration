@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.DoctorsController">
+   <top>
+      <Pane prefHeight="27.0" prefWidth="408.0" style="-fx-background-color: #00c1c2;" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Pane prefHeight="31.0" prefWidth="408.0" style="-fx-background-color: #00c1c2;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane prefHeight="425.0" prefWidth="713.0" BorderPane.alignment="CENTER">
+         <Button fx:id="btnEdit" layoutX="81.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Atualizar" />
+         <TextField fx:id="txtName" layoutX="193.0" layoutY="45.0" prefHeight="30.0" prefWidth="190.0" promptText="Nome" />
+         <TextField fx:id="txtCpf" layoutX="193.0" layoutY="90.0" prefHeight="30.0" prefWidth="190.0" promptText="CPF" />
+         <PasswordField fx:id="txtPassword" layoutX="192.0" layoutY="135.0" prefHeight="30.0" prefWidth="190.0" promptText="Senha" />
+         <Label layoutX="74.0" layoutY="53.0" text="Nome" />
+         <PasswordField fx:id="txtConfPass" layoutX="192.0" layoutY="182.0" prefHeight="30.0" prefWidth="190.0" promptText="Confirmar Senha" />
+         <Label layoutX="71.0" layoutY="98.0" text="CPF" />
+         <Label layoutX="71.0" layoutY="143.0" text="Senha" />
+         <Label layoutX="71.0" layoutY="190.0" text="Confirmar Senha" />
+         <Label layoutX="71.0" layoutY="236.0" />
+         <MenuButton fx:id="firstSpecialization" layoutX="193.0" layoutY="228.0" mnemonicParsing="false" text="MenuButton">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Action 1" />
+             <MenuItem mnemonicParsing="false" text="Action 2" />
+           </items>
+         </MenuButton>
+         <MenuButton fx:id="secondSpecialization" layoutX="308.0" layoutY="228.0" mnemonicParsing="false" text="MenuButton">
+            <items>
+               <MenuItem mnemonicParsing="false" text="Action 1" />
+               <MenuItem mnemonicParsing="false" text="Action 2" />
+            </items>
+         </MenuButton>
+         <Button fx:id="btnEdit1" layoutX="242.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Atualizar" />
+         <Label layoutX="71.0" layoutY="232.0" text="Especializações" />
+      </Pane>
+   </center>
+</BorderPane>

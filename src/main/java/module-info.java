@@ -13,4 +13,5 @@ module pbl3medicaladmin {
     exports main.util;
     exports main.models;
     exports main.controllers;
+    opens main.models to javafx.fxml;
 }

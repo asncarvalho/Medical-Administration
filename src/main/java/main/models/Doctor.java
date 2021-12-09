@@ -5,28 +5,34 @@
  */
 package main.models;
 
-import java.util.Arrays;
-
 public class Doctor extends User{
-    private final MedicalResidency[] medicalResidencies;
 
-    // Por um array de dois lugares para as classes de residência médica.
+    private String primarySpecialization;
+
+    private String secondarySpecialization;
+
+    private final MedicalResidency[] medicalResidencies;
 
     public Doctor(String name, String cpf, String password) {
         super(name,cpf,password);
         this.medicalResidencies = new MedicalResidency[2];
     }
 
-    public MedicalResidency[] getMedicalResidencies() {
-        return medicalResidencies;
+    public String getPrimarySpecialization() {
+        return primarySpecialization;
     }
 
+    public void setPrimarySpecialization(String primarySpecialization) {
+        this.primarySpecialization = primarySpecialization;
+    }
 
-    @Override
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + Arrays.hashCode(getMedicalResidencies());
-        return result;
+    public String getSecondarySpecialization() {
+
+        return secondarySpecialization;
+    }
+
+    public void setSecondarySpecialization(String secondarySpecialization) {
+        this.secondarySpecialization = secondarySpecialization;
     }
 
     @Override
@@ -35,7 +41,12 @@ public class Doctor extends User{
                 "\nname = " + super.getName() +
                 ", \ncpf = " + super.getCpf() +
                 ", \npassword = " + super.getPassword() +
-                ", \nmedicalResidencies = " + Arrays.toString(medicalResidencies) +
+                ", \nprimarySpecialization= " + primarySpecialization +
+                ", \nsecondarySpecialization= " + secondarySpecialization +
                 "} " ;
+    }
+
+    public MedicalResidency[] getMedicalResidencies() {
+        return medicalResidencies;
     }
 }

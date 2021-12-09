@@ -26,6 +26,16 @@ public class DoctorsList extends LinkedList<Doctor>{
     public ArrayList<Doctor> toArray(){
         ArrayList<Doctor> arrayList = new ArrayList<>();
         for(Doctor current : this){
+            if(current.getMedicalResidencies()[0] != null ){
+                current.setPrimarySpecialization(current.getMedicalResidencies()[0].getDescription());
+            }else {
+                current.setPrimarySpecialization("Sem Especialização");
+            }
+            if(current.getMedicalResidencies()[1] != null ){
+                current.setSecondarySpecialization(current.getMedicalResidencies()[1].getDescription());
+            }else {
+                current.setSecondarySpecialization("Sem Especialização");
+            }
             arrayList.add(current);
         }
         return arrayList;

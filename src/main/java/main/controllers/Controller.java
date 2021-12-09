@@ -1,9 +1,7 @@
 package main.controllers;
 
-import main.util.DoctorsList;
-import main.util.FileStream;
-import main.util.PatientsList;
-import main.util.UsersList;
+import main.models.MedicalResidency;
+import main.util.*;
 
 
 /**
@@ -15,11 +13,13 @@ public class Controller implements FileStream<Controller> {
     private DoctorsList doctorsList;
     private PatientsList patientList;
     private UsersList userList;
+    private ResidenciesList specializations;
 
     private Controller() {
         this.doctorsList = new DoctorsList();
         this.patientList = new PatientsList();
         this.userList = new UsersList();
+        this.specializations = new ResidenciesList();
     }
     
     public static Controller getInstance(){
@@ -35,11 +35,14 @@ public class Controller implements FileStream<Controller> {
 
     public UsersList getUserList() { return userList; }
 
+    public ResidenciesList getSpecializations() { return specializations; }
+
     @Override
     public void set(Controller data) {
         this.doctorsList = data.doctorsList;
         this.patientList = data.patientList;
         this.userList = data.userList;
+        this.specializations = data.specializations;
     }
-    
+
 }

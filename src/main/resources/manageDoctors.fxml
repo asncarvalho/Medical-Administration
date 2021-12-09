@@ -23,10 +23,11 @@
          <children>
             <TableView fx:id="tblMain" prefHeight="335.0" prefWidth="873.0" GridPane.rowIndex="1">
               <columns>
-                <TableColumn id="fieldName" fx:id="colName" prefWidth="365.0382444858551" text="Nome" />
-                <TableColumn id="fieldCpf" fx:id="colCPF" minWidth="0.0" prefWidth="138.63470458984375" text="CPF" />
-                  <TableColumn id="fieldResidencies" fx:id="colResidencies" minWidth="0.0" prefWidth="210.44546508789062" text="Especialidades" />
-                  <TableColumn fx:id="colActions" minWidth="0.0" prefWidth="305.196044921875" text="Ações" />
+                <TableColumn id="fieldName" fx:id="colName" prefWidth="377.0" text="Nome" />
+                <TableColumn id="fieldCpf" fx:id="colCPF" minWidth="0.0" prefWidth="195.0" text="CPF" />
+                  <TableColumn id="field1stResidency" fx:id="field1stResidency" minWidth="0.0" prefWidth="125.0" text="Especialidade 1" />
+                  <TableColumn id="field2stResidency" fx:id="field2ndResidency" minWidth="0.0" prefWidth="125.0" text="Especialidade 2" />
+                  <TableColumn fx:id="colActions" minWidth="0.0" prefWidth="202.0" text="Ações" />
               </columns>
             </TableView>
             <Text fill="#00c1c2" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Médicos" textAlignment="CENTER" wrappingWidth="320.13671875">

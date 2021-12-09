@@ -26,7 +26,7 @@ public class ListDoctorsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
-
+        
         tblMain.setItems(doctorsData);
     }
 }
